@@ -1,34 +1,43 @@
-import React, {useRef, useState} from 'react'
-import "./Video.css"
-import Vedeo from "./Vidio/sort vidio.mp4"
+import React, { useRef, useState } from "react";
+import "./Video.css";
+import VideoFooter from "./VideoFooter";
+import VideoSidebar from "./VideoSidebar";
+import Vedeo from "./Vidio/sort vidio.mp4";
 
 function Video() {
-    const [playing,setPlaying] = useState(false);
-    
-    const videoRef =useRef(null);
-    const handleVideoPress = () => {
-        // If vidio is playing
-        // Stop it
+  const [playing, setPlaying] = useState(false);
 
-
-
-
-        // Oterwise if it not playing
-        // play it-----
+  const videoRef = useRef(null);
+  const handleVideoPress = () => {
+    if (playing) {
+      videoRef.current.pause();
+      setPlaying(false);
+    } else {
+      videoRef.current.play();
+      setPlaying(true);
     }
-    return (
-        <div className="video">
-            <video
-            onClick={handleVideoPress}
-            className="video__player" 
-            loop
-            ref={videoRef}
-            src={Vedeo}></video>
-            {/* {Videofooter} */}
-            {/* {VideoSidebar} */}
-       
-        </div>
-    )
+    // If vidio is playing
+    // Stop it
+
+    // Oterwise if it not playing
+    // play it-----
+  };
+  return (
+    <div className="video">
+      <video
+        onClick={handleVideoPress}
+        className="video__player"
+        loop
+        ref={videoRef}
+        src={Vedeo}
+      ></video>
+
+      <VideoFooter/>
+      <VideoSidebar/>
+      {/* {Videofooter} */}
+      {/* {VideoSidebar} */}
+    </div>
+  );
 }
 
-export default Video
+export default Video;
