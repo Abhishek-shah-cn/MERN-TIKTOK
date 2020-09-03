@@ -7,7 +7,9 @@ function App() {
       <h1>This is Mern Staack</h1>
 
       <div className="app__videos">
-        <Video />
+        <Video channel="@bhishek"
+        likes={112} shares={458} messages={101} song="Let me Love You" description="Yoyo this is a TikTok"/>
+
         <Video />
       </div>
 

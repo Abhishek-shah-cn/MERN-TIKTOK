@@ -4,7 +4,7 @@ import VideoFooter from "./VideoFooter";
 import VideoSidebar from "./VideoSidebar";
 import Vedeo from "./Vidio/sort vidio.mp4";
 
-function Video() {
+function Video({ channel , description , song, likes,messages,shares}) {
   const [playing, setPlaying] = useState(false);
 
   const videoRef = useRef(null);
@@ -32,10 +32,10 @@ function Video() {
         src={Vedeo}
       ></video>
 
-      <VideoFooter/>
-      <VideoSidebar/>
+      <VideoFooter channel={channel} description={description} song={song}/>
+      <VideoSidebar likes={likes} shares={shares} messages={messages}/>
       {/* {Videofooter} */}
-      {/* {VideoSidebar} */}
+      {/* {VideoSidebar} */} 
     </div>
   );
 }
