@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## You have click on video and click downword button for scrolling next vidio content
+## You have to click on video and click downword button for scrolling next vidio content
 ## LIVE https://mern-tiktok-da438.web.app/
 ## Available Scripts
 
