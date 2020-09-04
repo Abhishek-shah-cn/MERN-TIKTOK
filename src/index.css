@@ -22,10 +22,11 @@ html {
 }
 
 .app {
-  height:100vh ;
+  height:150vh ;
   background-color:black;
   display: grid;
   place-items: center;
+
 
 }
 .app__videos {
